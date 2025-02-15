@@ -1,0 +1,37 @@
+{% extends "bash.html" %}
+
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+{% endblock head %}
+
+{% block title %}
+About Us
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <h1>About Us</h1>
+    <p>Welcome to RR Software, where passion meets innovation. We are a team dedicated to delivering high-quality solutions and services that make a difference.</p>
+    <p>Our mission is to create meaningful experiences for our customers by focusing on innovation, integrity, and excellence in everything we do.</p>
+
+    <h2>Meet Our Team</h2>
+    <div class="team">
+        <div class="team-member">
+            <img src="{% static 'images/sp.jpg' %}" alt="Team Member">
+            <h3>John Doe</h3>
+            <p>Founder & CEO</p>
+        </div>
+        <div class="team-member">
+            <img src="{% static 'images/ritik.jpg' %}" alt="Team Member">
+            <h3>Jane Smith</h3>
+            <p>Marketing Head</p>
+        </div>
+        <div class="team-member">
+            <img src="{% static 'images/rishi.jpg' %}" alt="Team Member">
+            <h3>Mike Johnson</h3>
+            <p>Lead Developer</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

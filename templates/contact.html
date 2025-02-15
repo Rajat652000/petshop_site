@@ -1,0 +1,46 @@
+{% extends "bash.html" %}
+
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+{% endblock head %}
+
+{% block title %}
+Contact Us
+{% endblock title %}
+
+{% block content %}
+<div class="contact-container">
+    <div class="form-section">
+        <h2>Contact Us</h2>
+        <form method="POST" action="/contact" class="contact-form">
+        {% csrf_token %}
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" class="form-control" id="phone" name="phone" placeholder="Your Phone Number">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" class="form-control" id="city" name="city" placeholder="Your City">
+            </div>
+            <div class="form-group">
+                <label for="porpose">Purpose</label>
+                <input type="text" class="form-control" id="porpose" name="porpose" placeholder="porpose">
+            </div>
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+    </div>
+    <div class="image-section">
+        <img src="{% static 'images/pet_store.jpg' %}" alt="Cute Pet">
+    </div>
+</div>
+{% endblock content %}

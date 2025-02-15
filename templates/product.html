@@ -1,0 +1,16 @@
+{% extends "bash.html" %}
+{% load static %}
+
+{% block content %}
+    <h1 style="color: rgb(241, 222, 12);">Pet Products</h1>
+    <div class="gallery">
+        {% for product in products %}
+            <div class="photo-card">
+                <img src="{% static '' %}{{ product.image }}" alt="{{ product.name }}">
+                <h2>{{ product.name }}</h2>
+                <p>{{ product.description }}</p>
+                <p class="price">${{ product.price }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
